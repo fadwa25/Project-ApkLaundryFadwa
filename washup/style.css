@@ -1,0 +1,644 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.daftar-container {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.login-container {
+  background: white;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.header {
+  height: 160px;
+  background: url('image/BoardLogin.png') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.logo img {
+  width: 75px;
+  height: 75px;
+}
+
+.form-content {
+  padding: 40px 30px 40px;
+}
+
+.subtitle {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.role-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.role-btn {
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.role-btn:has(input:checked) {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.role-btn:hover {
+  border-color: #3b82f6;
+}
+
+.role-btn input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mb3 {
+  padding: 0px 30px 40px
+}
+
+
+:root {
+  --wu-primary:       #2B7FC1;
+  --wu-primary-dark:  #1a5f96;
+  --wu-primary-light: #e8f3fb;
+  --wu-accent:        #f5a623;
+  --wu-green:         #27ae60;
+  --wu-text:          #1a1a2e;
+  --wu-muted:         #7a8a9a;
+  --wu-bg:            #eef4fb;
+  --wu-white:         #ffffff;
+  --wu-border:        #dde8f0;
+  --wu-shadow:        0 4px 16px rgba(43, 127, 193, 0.10);
+  --wu-radius:        16px;
+  --wu-radius-sm:     10px;
+}
+
+/*-- Override body khusus halaman washup --*/
+body.washup-body {
+  display: block;
+  align-items: unset;
+  justify-content: unset;
+  padding: 0;
+  background: var(--wu-bg);
+  padding-bottom: 80px;
+}
+
+/*-- Wrapper utama --*/
+.washup-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--wu-bg);
+  min-height: 100vh;
+}
+
+/*-- TOPBAR --*/
+.washup-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: var(--wu-white);
+  border-bottom: 1px solid var(--wu-border);
+  box-shadow: 0 2px 8px rgba(43,127,193,0.06);
+}
+
+.washup-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.washup-logo-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.washup-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.washup-notif-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--wu-text);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.washup-notif-btn:hover { color: var(--wu-primary); }
+
+.washup-notif-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.washup-customer-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--wu-text);
+}
+
+.washup-customer-badge .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--wu-green);
+  display: inline-block;
+}
+
+/*-- HERO BANNER --*/
+.washup-hero {
+  margin: 24px 24px 0;
+  background: linear-gradient(120deg, #2B7FC1 0%, #1a5f96 60%, #5baee8 100%);
+  border-radius: var(--wu-radius);
+  padding: 36px 36px 30px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.washup-hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 180px; height: 180px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 50%;
+}
+
+.washup-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -60px; right: 60px;
+  width: 140px; height: 140px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+}
+
+.washup-hero h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+}
+
+.washup-hero p {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.88;
+  line-height: 1.6;
+  margin-bottom: 22px;
+  position: relative;
+  z-index: 1;
+}
+
+.washup-search-box {
+  position: relative;
+  z-index: 1;
+}
+
+.washup-search-box input {
+  width: 100%;
+  max-width: 380px;
+  padding: 13px 18px 13px 44px;
+  border-radius: 50px;
+  border: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 14px;
+  background: rgba(255,255,255,0.95);
+  color: var(--wu-text);
+  outline: none;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: box-shadow 0.2s;
+}
+
+.washup-search-box input:focus {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.16);
+}
+
+.washup-search-box input::placeholder { color: #aab6c4; }
+
+.washup-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.washup-search-icon svg {
+  width: 18px; height: 18px;
+  stroke: var(--wu-primary);
+  fill: none;
+}
+
+/*-- SECTION TITLE --*/
+.washup-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--wu-text);
+  margin: 28px 24px 14px;
+}
+
+.washup-section-title svg {
+  width: 18px; height: 18px;
+}
+
+/*-- LAUNDRY CARDS --*/
+.washup-laundry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 0 24px;
+}
+
+.washup-laundry-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--wu-white);
+  border-radius: var(--wu-radius);
+  padding: 16px 18px;
+  box-shadow: var(--wu-shadow);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: box-shadow 0.22s, border-color 0.22s, transform 0.18s;
+}
+
+.washup-laundry-card:hover {
+  box-shadow: 0 8px 28px rgba(43,127,193,0.16);
+  border-color: var(--wu-primary);
+  transform: translateY(-2px);
+}
+
+.washup-laundry-thumb {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--wu-radius-sm);
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--wu-primary-light);
+}
+
+.washup-laundry-info { flex: 1; min-width: 0; }
+
+.washup-laundry-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--wu-text);
+  margin-bottom: 4px;
+}
+
+.washup-laundry-address {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--wu-muted);
+  margin-bottom: 8px;
+}
+
+.washup-laundry-address svg {
+  width: 13px; height: 13px;
+  flex-shrink: 0;
+}
+
+.washup-laundry-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.washup-badge-open {
+  background: var(--wu-green);
+  color: white;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.washup-badge-duration {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--wu-muted);
+  font-weight: 500;
+}
+
+.washup-badge-duration svg {
+  width: 14px; height: 14px;
+  stroke: var(--wu-muted);
+  fill: none;
+}
+
+.washup-laundry-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wu-text);
+  flex-shrink: 0;
+}
+
+.washup-star { color: var(--wu-accent); font-size: 17px; }
+
+.washup-arrow {
+  color: #c0ccd8;
+  font-size: 20px;
+  margin-left: 8px;
+  flex-shrink: 0;
+  font-weight: 300;
+}
+
+/*-- BOTTOM NAVIGATION --*/
+.washup-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--wu-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 0 14px;
+  border-top: 1px solid var(--wu-border);
+  z-index: 200;
+  box-shadow: 0 -2px 12px rgba(43,127,193,0.08);
+}
+
+.washup-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--wu-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: color 0.2s;
+  min-width: 64px;
+}
+
+.washup-nav-item svg {
+  width: 24px; height: 24px;
+  stroke: var(--wu-muted);
+  fill: none;
+  transition: stroke 0.2s;
+}
+
+.washup-nav-item.active,
+.washup-nav-item:hover {
+  color: var(--wu-primary);
+}
+
+.washup-nav-item.active svg,
+.washup-nav-item:hover svg {
+  stroke: var(--wu-primary);
+}
+
+.washup-nav-item.active .nav-icon-filled {
+  fill: var(--wu-primary);
+  stroke: var(--wu-primary);
+}
+
+/*-- DETAIL PAGE -- */
+.washup-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 22px 24px 16px;
+  color: var(--wu-primary);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: opacity 0.2s;
+  padding: 0;
+}
+
+.washup-back-btn:hover { opacity: 0.75; }
+
+.washup-back-btn svg {
+  width: 18px; height: 18px;
+  stroke: var(--wu-primary);
+  fill: none;
+}
+
+.washup-detail-card {
+  margin: 0 24px 24px;
+  background: var(--wu-white);
+  border-radius: var(--wu-radius);
+  box-shadow: var(--wu-shadow);
+  overflow: hidden;
+}
+
+.washup-detail-hero-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  background: var(--wu-primary-light);
+}
+
+.washup-detail-body { padding: 24px 24px 28px; }
+
+.washup-detail-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--wu-text);
+  margin-bottom: 5px;
+}
+
+.washup-detail-address {
+  font-size: 13px;
+  color: var(--wu-muted);
+  margin-bottom: 22px;
+}
+
+.washup-services-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wu-text);
+  margin-bottom: 14px;
+}
+
+.washup-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.washup-service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1.5px solid var(--wu-border);
+  border-radius: var(--wu-radius-sm);
+  padding: 15px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.washup-service-item:hover {
+  border-color: var(--wu-primary);
+  box-shadow: 0 2px 10px rgba(43,127,193,0.10);
+}
+
+.washup-service-info { flex: 1; min-width: 0; }
+
+.washup-service-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--wu-text);
+  margin-bottom: 3px;
+}
+
+.washup-service-desc {
+  font-size: 12px;
+  color: var(--wu-muted);
+  margin-bottom: 8px;
+}
+
+.washup-service-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.washup-service-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--wu-primary);
+}
+
+.washup-service-duration {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--wu-muted);
+}
+
+.washup-service-duration svg {
+  width: 13px; height: 13px;
+  stroke: var(--wu-muted);
+  fill: none;
+}
+
+.washup-service-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--wu-primary-light);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.washup-service-btn:hover { background: var(--wu-primary); }
+
+.washup-service-btn svg {
+  width: 20px; height: 20px;
+  stroke: var(--wu-primary);
+  fill: none;
+  transition: stroke 0.2s;
+}
+
+.washup-service-btn:hover svg { stroke: white; }
+
+/*-- RESPONSIVE -- */
+@media (max-width: 600px) {
+  .washup-hero            { margin: 14px 14px 0; padding: 28px 22px 24px; }
+  .washup-hero h1         { font-size: 18px; }
+  .washup-section-title   { margin: 20px 14px 10px; }
+  .washup-laundry-list    { padding: 0 14px; }
+  .washup-detail-card     { margin: 0 14px 20px; }
+  .washup-back-btn        { margin: 16px 14px 12px; }
+  .washup-topbar          { padding: 14px 18px; }
+  .washup-detail-hero-img { height: 150px; }
+} 
